@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DelvinTria Saputra | Situs Resmi</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+ --bg:#0b0d10;
+ --box:#14171c;
+ --box2:#191d23;
+ --line:#292e35;
+ --text:#f5f5f5;
+ --muted:#a0a5ad;
+ --green:#c5fa75;
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+ background:var(--bg);
+ color:var(--text);
+ font-family:'DM Sans',sans-serif;
+ line-height:1.6;
+}
+
+a{
+ color:inherit;
+ text-decoration:none;
+}
+
+.container{
+ width:90%;
+ max-width:1150px;
+ margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+ height:75px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ border-bottom:1px solid var(--line);
+}
+
+.logo{
+ font-family:'Space Grotesk';
+ font-size:21px;
+ font-weight:700;
+}
+
+.logo span{color:var(--green)}
+
+.nav-links{
+ display:flex;
+ gap:25px;
+}
+
+.nav-links a{
+ color:var(--muted);
+ font-size:12px;
+}
+
+.nav-links a:hover{color:var(--green)}
+
+.nav-contact{
+ border:1px solid var(--line);
+ padding:9px 17px;
+ border-radius:7px;
+ font-size:12px;
+}
+
+/* HERO */
+
+.hero{
+ padding:85px 0 65px;
+}
+
+.hero-label{
+ display:inline-block;
+ color:var(--green);
+ background:#c5fa7512;
+ border:1px solid #c5fa7533;
+ padding:7px 13px;
+ border-radius:5px;
+ font-size:11px;
+ letter-spacing:1px;
+ margin-bottom:25px;
+}
+
+.hero h1{
+ font-family:'Space Grotesk';
+ font-size:clamp(42px,8vw,85px);
+ line-height:1.05;
+ letter-spacing:-4px;
+}
+
+.hero h1 span{color:var(--green)}
+
+.hero-description{
+ color:var(--muted);
+ max-width:650px;
+ margin-top:20px;
+ font-size:14px;
+ line-height:1.9;
+}
+
+.hero-buttons{
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:28px;
+}
+
+.button{
+ padding:12px 20px;
+ border-radius:6px;
+ font-size:12px;
+ font-weight:700;
+ transition:.25s;
+}
+
+.button:hover{transform:translateY(-3px)}
+
+.button-main{
+ background:var(--green);
+ color:#10130c;
+}
+
+.button-outline{
+ border:1px solid var(--line);
+}
+
+/* SECTION */
+
+section{
+ padding:65px 0;
+}
+
+.section-heading{
+ margin-bottom:30px;
+}
+
+.section-number{
+ color:var(--green);
+ font-size:11px;
+ letter-spacing:2px;
+ font-weight:700;
+}
+
+.section-heading h2{
+ font-family:'Space Grotesk';
+ font-size:35px;
+ letter-spacing:-1px;
+ margin-top:7px;
+}
+
+.section-heading p{
+ color:var(--muted);
+ font-size:13px;
+ margin-top:7px;
+}
+
+/* INFORMASI */
+
+.info-layout{
+ display:grid;
+ grid-template-columns:1.1fr .9fr;
+ gap:18px;
+}
+
+.info-box{
+ background:var(--box);
+ border:1px solid var(--line);
+ border-radius:12px;
+ padding:28px;
+}
+
+.info-box h3{
+ font-size:19px;
+ margin-bottom:13px;
+}
+
+.info-box p{
+ color:var(--muted);
+ font-size:13px;
+ line-height:1.9;
+}
+
+.info-list{
+ margin-top:15px;
+}
+
+.info-row{
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+ padding:12px 0;
+ border-bottom:1px solid var(--line);
+ font-size:12px;
+}
+
+.info-row:last-child{border:0}
+
+.info-row span{color:var(--muted)}
+.info-row strong{text-align:right}
+
+/* PENCAPAIAN */
+
+.achievement-list{
+ display:grid;
+ gap:15px;
+}
+
+.achievement{
+ background:linear-gradient(110deg,#19221a,#14171c);
+ border:1px solid #35432d;
+ border-radius:12px;
+ padding:25px;
+ display:flex;
+ align-items:flex-start;
+ gap:22px;
+}
+
+.achievement-icon{
+ min-width:65px;
+ height:65px;
+ border-radius:10px;
+ background:#c5fa7518;
+ color:var(--green);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:24px;
+ font-weight:800;
+}
+
+.achievement h3{
+ font-size:17px;
+ margin-bottom:7px;
+}
+
+.achievement p{
+ color:var(--muted);
+ font-size:12px;
+ line-height:1.8;
+}
+
+.status{
+ display:inline-block;
+ margin-top:12px;
+ padding:5px 9px;
+ background:#c5fa7518;
+ color:var(--green);
+ font-size:10px;
+ border-radius:4px;
+}
+
+/* KEAHLIAN */
+
+.skills{
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+}
+
+.skill{
+ border:1px solid var(--line);
+ background:var(--box);
+ padding:10px 15px;
+ border-radius:6px;
+ color:#ddd;
+ font-size:12px;
+}
+
+/* PROYEK */
+
+.project-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:18px;
+}
+
+.project{
+ background:var(--box);
+ border:1px solid var(--line);
+ border-radius:12px;
+ overflow:hidden;
+ transition:.25s;
+}
+
+.project:hover{
+ transform:translateY(-4px);
+ border-color:#65764d;
+}
+
+.project-image{
+ height:190px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ background:linear-gradient(135deg,#202b1d,#111419);
+ color:var(--green);
+ font-family:'Space Grotesk';
+ font-size:30px;
+ font-weight:700;
+}
+
+.project-content{padding:22px}
+
+.project-content small{
+ color:var(--green);
+ font-size:10px;
+ letter-spacing:1px;
+}
+
+.project-content h3{
+ margin:8px 0;
+ font-size:18px;
+}
+
+.project-content p{
+ color:var(--muted);
+ font-size:12px;
+ line-height:1.8;
+}
+
+/* JASA */
+
+.service-list{
+ border-top:1px solid var(--line);
+}
+
+.service{
+ display:grid;
+ grid-template-columns:45px 1fr 25px;
+ gap:15px;
+ align-items:center;
+ padding:19px 12px;
+ border-bottom:1px solid var(--line);
+ transition:.2s;
+}
+
+.service:hover{
+ background:var(--box);
+ padding-left:20px;
+}
+
+.service-no{
+ color:var(--green);
+ font-size:12px;
+}
+
+.service h3{
+ font-size:14px;
+ margin-bottom:4px;
+}
+
+.service p{
+ color:var(--muted);
+ font-size:12px;
+}
+
+.service-arrow{
+ color:var(--green);
+ font-size:18px;
+}
+
+/* KONTAK */
+
+.contact-box{
+ background:var(--green);
+ color:#10130c;
+ padding:40px;
+ border-radius:12px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:25px;
+}
+
+.contact-box h2{
+ font-family:'Space Grotesk';
+ font-size:clamp(30px,5vw,48px);
+ line-height:1.1;
+ letter-spacing:-2px;
+}
+
+.contact-box p{
+ font-size:12px;
+ margin-top:12px;
+ max-width:450px;
+}
+
+.contact-buttons{
+ display:flex;
+ flex-direction:column;
+ gap:10px;
+}
+
+.contact-button{
+ background:#10130c;
+ color:white;
+ padding:13px 18px;
+ border-radius:6px;
+ text-align:center;
+ font-size:12px;
+ font-weight:700;
+ white-space:nowrap;
+}
+
+/* FOOTER */
+
+footer{
+ border-top:1px solid var(--line);
+ padding:25px 0;
+ margin-top:50px;
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+ color:#777;
+ font-size:11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:750px){
+
+ .nav-links{gap:12px}
+ .nav-links a{font-size:10px}
+ .nav-contact{display:none}
+
+ .hero{padding:65px 0 45px}
+ .hero h1{letter-spacing:-2px}
+
+ .info-layout{grid-template-columns:1fr}
+ .project-grid{grid-template-columns:1fr}
+
+ .achievement{gap:13px;padding:18px}
+ .achievement-icon{min-width:48px;height:48px;font-size:18px}
+
+ .contact-box{
+  display:block;
+  padding:28px;
+ }
+
+ .contact-buttons{
+  margin-top:25px;
+ }
+
+ footer{flex-direction:column}
+}
+
+@media(max-width:430px){
+ .nav-links{gap:9px}
+ .nav-links a{font-size:9px}
+ .section-heading h2{font-size:29px}
+ .hero h1{font-size:45px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- NAVIGASI -->
+
+<nav>
+ <a href="#" class="logo">DELVIN<span>TRIA.</span></a>
+
+ <div class="nav-links">
+  <a href="#informasi">Informasi</a>
+  <a href="#pencapaian">Pencapaian</a>
+  <a href="#proyek">Proyek</a>
+  <a href="#jasa">Jasa</a>
+ </div>
+
+ <a href="#kontak" class="nav-contact">Hubungi Saya ↗</a>
+</nav>
+
+
+<!-- HALAMAN UTAMA -->
+
+<header class="hero">
+
+ <div class="hero-label">SITUS RESMI • DELVINTRIA SAPUTRA</div>
+
+ <h1>
+  DELVINTRIA<br>
+  <span>SAPUTRA.</span>
+ </h1>
+
+ <p class="hero-description">
+  Selamat datang di situs pribadi saya. Saya adalah seorang
+  pelajar yang memiliki ketertarikan pada dunia teknologi,
+  pemrograman, pembuatan website, aplikasi dan berbagai
+  pengembangan produk digital.
+ </p>
+
+ <div class="hero-buttons">
+  <a href="#informasi" class="button button-main">
+   LIHAT INFORMASI SAYA ↓
+  </a>
+
+  <a href="#pencapaian" class="button button-outline">
+   LIHAT PENCAPAIAN
+  </a>
+ </div>
+
+</header>
+
+
+<!-- INFORMASI DIRI -->
+
+<section id="informasi">
+
+ <div class="section-heading">
+  <div class="section-number">01 — TENTANG SAYA</div>
+  <h2>Informasi Pribadi</h2>
+  <p>Kenali saya lebih dekat melalui informasi berikut.</p>
+ </div>
+
+ <div class="info-layout">
+
+  <div class="info-box">
+   <h3>Halo, saya DelvinTria Saputra.</h3>
+
+   <p>
+    Saya berasal dari Lalang dan saat ini berusia 15 tahun.
+    Saya memiliki minat besar terhadap teknologi, terutama
+    dalam bidang pemrograman dan pengembangan digital.
+
+    <br><br>
+
+    Saya senang mencoba hal baru, membuat proyek website,
+    merancang aplikasi serta mempelajari cara kerja berbagai
+    teknologi. Saya terus mengembangkan kemampuan melalui
+    latihan dan proyek mandiri.
+   </p>
+  </div>
+
+  <div class="info-box">
+
+   <h3>Data Diri</h3>
+
+   <div class="info-list">
+
+    <div class="info-row">
+     <span>Nama Lengkap</span>
+     <strong>DelvinTria Saputra</strong>
+    </div>
+
+    <div class="info-row">
+     <span>Usia</span>
+     <strong>15 Tahun</strong>
+    </div>
+
+    <div class="info-row">
+     <span>Asal</span>
+     <strong>Lalang</strong>
+    </div>
+
+    <div class="info-row">
+     <span>Status</span>
+     <strong>Pelajar</strong>
+    </div>
+
+    <div class="info-row">
+     <span>Bidang Minat</span>
+     <strong>Teknologi & Coding</strong>
+    </div>
+
+    <div class="info-row">
+     <span>Fokus</span>
+     <strong>Website & Aplikasi</strong>
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- PENCAPAIAN -->
+
+<section id="pencapaian">
+
+ <div class="section-heading">
+  <div class="section-number">02 — PRESTASI & PENGALAMAN</div>
+  <h2>Pencapaian Saya</h2>
+  <p>Prestasi, pengalaman dan kemampuan yang sedang saya kembangkan.</p>
+ </div>
+
+ <div class="achievement-list">
+
+  <div class="achievement">
+
+   <div class="achievement-icon">03</div>
+
+   <div>
+    <h3>Juara 3 Kompetisi Bot Internasional</h3>
+
+    <p>
+     Hasil sementara kompetisi bot tingkat internasional.
+     Pengumuman dan pengesahan resmi dari pihak penyelenggara
+     masih menunggu konfirmasi.
+    </p>
+
+    <span class="status">
+     BELUM RESMI — MENUNGGU KONFIRMASI
+    </span>
+   </div>
+
+  </div>
+
+  <div class="achievement">
+
+   <div class="achievement-icon">DEV</div>
+
+   <div>
+    <h3>Pengalaman Pengembangan Website</h3>
+
+    <p>
+     Mempelajari dan mengembangkan berbagai proyek website
+     menggunakan HTML, CSS, JavaScript serta teknologi
+     pendukung lainnya.
+    </p>
+
+   </div>
+
+  </div>
+
+  <div class="achievement">
+
+   <div class="achievement-icon">APP</div>
+
+   <div>
+    <h3>Eksplorasi Pembuatan Aplikasi</h3>
+
+    <p>
+     Mengembangkan konsep aplikasi berbasis web, sistem
+     komunikasi, penyimpanan file dan berbagai fitur digital.
+    </p>
+
+   </div>
+
+  </div>
+
+ </div>
+
+ <div style="margin-top:35px">
+  <h3 style="margin-bottom:17px;font-size:17px">
+   Kemampuan & Teknologi
+  </h3>
+
+  <div class="skills">
+   <span class="skill">HTML</span>
+   <span class="skill">CSS</span>
+   <span class="skill">JavaScript</span>
+   <span class="skill">Website Development</span>
+   <span class="skill">Desain Antarmuka</span>
+   <span class="skill">Supabase</span>
+   <span class="skill">Netlify</span>
+   <span class="skill">Pengembangan Aplikasi Web</span>
+  </div>
+ </div>
+
+</section>
+
+
+<!-- PROYEK -->
+
+<section id="proyek">
+
+ <div class="section-heading">
+  <div class="section-number">03 — HASIL KARYA</div>
+  <h2>Proyek Saya</h2>
+  <p>Beberapa proyek dan konsep digital yang pernah saya kerjakan.</p>
+ </div>
+
+ <div class="project-grid">
+
+  <div class="project">
+   <div class="project-image">MEDIAFIRS</div>
+
+   <div class="project-content">
+    <small>PROYEK WEBSITE</small>
+    <h3>MediaFirs</h3>
+    <p>
+     Konsep website penyimpanan file dengan tampilan
+     modern, mode gelap, sistem akun dan database.
+    </p>
+   </div>
+  </div>
+
+  <div class="project">
+   <div class="project-image">PRIVATE CHAT</div>
+
+   <div class="project-content">
+    <small>PROYEK APLIKASI</small>
+    <h3>Aplikasi Chat Pribadi</h3>
+    <p>
+     Konsep aplikasi komunikasi dengan akun pengguna,
+     percakapan pribadi, grup dan fitur pesan langsung.
+    </p>
+   </div>
+  </div>
+
+  <div class="project">
+   <div class="project-image">GAME PROJECT</div>
+
+   <div class="project-content">
+    <small>PROYEK PERMAINAN</small>
+    <h3>Pengembangan Game</h3>
+    <p>
+     Eksplorasi konsep permainan dengan misi, interaksi,
+     sistem pilihan dan beberapa kemungkinan akhir.
+    </p>
+   </div>
+  </div>
+
+  <div class="project">
+   <div class="project-image">DIGITAL HUB</div>
+
+   <div class="project-content">
+    <small>PROYEK DIGITAL</small>
+    <h3>Platform Layanan Digital</h3>
+    <p>
+     Konsep platform yang menyediakan berbagai layanan
+     pembuatan website dan aplikasi.
+    </p>
+   </div>
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- JASA -->
+
+<section id="jasa">
+
+ <div class="section-heading">
+  <div class="section-number">04 — LAYANAN</div>
+  <h2>Jasa yang Tersedia</h2>
+  <p>Berikut beberapa layanan digital yang dapat dipesan.</p>
+ </div>
+
+ <div class="service-list">
+
+  <div class="service">
+   <div class="service-no">01</div>
+   <div>
+    <h3>Pembuatan Website Pribadi</h3>
+    <p>Website profil, biodata, portofolio dan halaman pribadi.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">02</div>
+   <div>
+    <h3>Pembuatan Website Bisnis</h3>
+    <p>Website toko, usaha, promosi produk dan perusahaan.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">03</div>
+   <div>
+    <h3>Pembuatan Aplikasi Berbasis Web</h3>
+    <p>Aplikasi sederhana, sistem akun, dashboard dan alat digital.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">04</div>
+   <div>
+    <h3>Pembuatan E-book</h3>
+    <p>Pembuatan buku digital, tata letak dan desain sampul.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">05</div>
+   <div>
+    <h3>Desain Tampilan Website</h3>
+    <p>Desain halaman, susunan menu dan tampilan antarmuka.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">06</div>
+   <div>
+    <h3>Perbaikan Website</h3>
+    <p>Memperbaiki tampilan, kesalahan ringan dan fitur website.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">07</div>
+   <div>
+    <h3>Pembuatan Halaman Promosi</h3>
+    <p>Halaman khusus untuk memperkenalkan produk atau layanan.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">08</div>
+   <div>
+    <h3>Pembuatan Alat Digital</h3>
+    <p>Kalkulator, generator, penghitung dan alat berbasis website.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">09</div>
+   <div>
+    <h3>Pembuatan Website Undangan</h3>
+    <p>Undangan digital untuk acara dan kegiatan khusus.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+  <div class="service">
+   <div class="service-no">10</div>
+   <div>
+    <h3>Konsultasi Ide Website</h3>
+    <p>Diskusi konsep, fitur dan perencanaan proyek digital.</p>
+   </div>
+   <div class="service-arrow">↗</div>
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- KONTAK -->
+
+<section id="kontak">
+
+ <div class="contact-box">
+
+  <div>
+   <h2>Ada proyek<br>yang ingin dibuat?</h2>
+
+   <p>
+    Hubungi saya untuk berdiskusi mengenai pembuatan
+    website, aplikasi, e-book dan kebutuhan digital lainnya.
+   </p>
+  </div>
+
+  <div class="contact-buttons">
+
+   <a class="contact-button"
+      href="https://t.me/Monzzdam67"
+      target="_blank">
+    HUBUNGI VIA TELEGRAM ↗
+   </a>
+
+   <a class="contact-button"
+      href="https://whatsapp.com/channel/0029VbDiwTkBfxoCVcLT5b2T"
+      target="_blank">
+    SALURAN WHATSAPP ↗
+   </a>
+
+  </div>
+
+ </div>
+
+</section>
+
+p
+<footer>
+ <span>© 2026 DelvinTria Saputra</span>
+ <span>Dibuat untuk memperkenalkan diri dan karya.</span>
+</footer>
+
+</div>
+
+</body>
+</html>
